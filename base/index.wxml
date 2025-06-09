@@ -6,10 +6,12 @@
 		circular="true"
 		current="{{currentIndex}}"
 		bindchange="onSwiperChange"
+		bindtransition="onSwiperTransition"
 		previous-margin="200rpx"
     	next-margin="200rpx"
+		animation="false"
 	>
-		<block wx:for="{{imageList}}" wx:key="index">
+		<block wx:for="{{mainImgs}}" wx:key="index">
 			<swiper-item>
 				<view class="img-wrapper">
 					<image
@@ -23,7 +25,7 @@
 		</block>
 	</swiper>
 	<view class="dot-indicator">
-		<block wx:for="{{imageList}}" wx:key="index">
+		<block wx:for="{{mainImgs}}" wx:key="index">
 			<view class="dot {{currentIndex === index ? 'active' : ''}}"></view>
 		</block>
 	</view>
