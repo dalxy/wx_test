@@ -1,0 +1,50 @@
+@import "../weui.wxss";
+
+page {
+  background-color: #F8F8F8;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+}
+.swiper {
+  width: 100vw;
+  height: 300px;
+}
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.swiper-img {
+  width: 80vw;
+  height: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.dot-indicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 4px;
+  transition: background 0.3s;
+}
+.dot.active {
+  background: #fff;
+  border: 1px solid #ccc;
+}

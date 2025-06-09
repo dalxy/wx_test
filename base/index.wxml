@@ -1,0 +1,31 @@
+<view class="container">
+	<swiper
+		class="swiper"
+		indicator-dots="false"
+		interval="3000"
+		circular="true"
+		current="{{currentIndex}}"
+		bindchange="onSwiperChange"
+		previous-margin="200rpx"
+    	next-margin="200rpx"
+	>
+		<block wx:for="{{imageList}}" wx:key="index">
+			<swiper-item>
+				<view class="img-wrapper">
+					<image
+						src="{{item}}"
+						class="swiper-img"
+						style="transform: scale({{scaleList[index]}});"
+						mode="aspectFill"
+					/>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
+	<view class="dot-indicator">
+		<block wx:for="{{imageList}}" wx:key="index">
+			<view class="dot {{currentIndex === index ? 'active' : ''}}"></view>
+		</block>
+	</view>
+</view>
+
